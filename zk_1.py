@@ -1,4 +1,3 @@
-
 #defining function for counting the number of vowels and consonants
 def getNumberofVowelsAndConsonants(input):
     counter_v = 0
@@ -16,8 +15,9 @@ def getNumberofVowelsAndConsonants(input):
             else:
                counter_o += 1
         print(f"Your text contains {counter_v} vowels, {counter_c} consonants and {counter_o} other characters.")
-    except TypeError:
-        print("Your text has no vowels or consonants.")
+    except ValueError:
+        print("Program cannot process your input.")
+        quit()
 
 #running the fuction
 getNumberofVowelsAndConsonants(input = str(input("Enter the text: ")).lower())
